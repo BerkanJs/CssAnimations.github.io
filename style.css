@@ -1,0 +1,271 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-image: url(İmg/BackgroundPic.jpg);
+    font-family: sans-serif;
+    overflow-x:hidden;
+}
+
+
+
+
+
+
+
+
+
+/*HEADER SECTİON*/
+
+#header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.navbar .navitems{
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 1.2rem 1.2rem;
+   
+}
+.navbar a  i.toggle{
+    font-size: 3rem;
+    color: #fff;
+    display:none;
+    transform: rotate(180deg);
+    
+
+    
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar .navitems li{
+    
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: .8rem .8rem;
+  
+   
+}
+.navbar .navitems li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;
+    padding: 0.5rem;
+}
+.navbar .navitems li a:hover{
+    background-color: white;
+    color: purple;
+    border-radius: 20%;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+
+}
+.navbar .logo-container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.2rem 1.2rem;
+ 
+   
+     
+}
+
+.navbar .logo-container a{
+    text-align: center;
+    padding-right: 1rem;    
+   
+   
+}
+
+.navbar .logo-container a i{
+    color: #fff;
+    font-size: 2.3rem;
+    padding-right: 1rem;
+    margin: 0.5rem;
+   
+  
+    
+}
+.navbar .logo-container h3{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: .5s;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.navbar .logo-container h3:hover{
+    background-color: white;
+    color: purple;
+    border-radius: 15px 30px 45px 7.5px;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+}
+
+/*OPENİNG SECTİON*/
+
+#Opening{
+    width: 100%;
+    padding-top: 10rem;
+    
+}
+
+#Opening .contain{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Opening .contain h1{
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgb(39, 26, 28);
+    margin-bottom: 2rem;
+
+}
+
+#Opening .contain h3{
+    font-size: 2rem;
+    color: #cab8b8;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgb(75, 54, 58);
+    padding-bottom: 2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+
+}
+
+#Opening .contain button{
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: .8rem .8rem;
+    border-radius: 20%;
+    color: #4e4747;
+    transition: .3s;
+    
+  
+}
+#Opening .contain button:hover{
+    background-color: white;
+    color: purple;
+    border-radius: 15px 30px 45px 7.5px;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+
+}
+
+#Opening .wave{
+    position: absolute;
+    bottom: -2.5rem;
+    width: 100%;
+    left:0;
+    height: 10rem;
+    background-image: url(İmg/wave1.png);
+    background-size: 20rem 11rem;
+    background-repeat:repeat-x;
+    animation: waves 10s linear infinite;
+    
+}
+
+#Opening .wave2{
+    animation-direction:reverse ;
+    opacity: .2;
+
+}
+#Opening .wave3{
+    animation-duration: 4s;
+    opacity: .5;
+}
+
+@keyframes waves{
+    0%{
+        background-position-x:30rem;
+    }
+
+    100%{
+        background-position-x:100rem;
+    }
+}
+
+#Opening .fa-cog{
+    position: absolute;
+    font-size: 30rem;
+    opacity: .15;
+    color: #fff;
+    animation: rotate 10s linear infinite;
+}
+#Opening .nut1{
+    top: 10%;
+    left: -15rem;
+    
+}
+#Opening .nut2{
+   bottom:23%;
+   right: -13rem;
+   animation-direction: reverse;
+
+    
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*Responsive Design*/
+
+@media (max-width: 600px) {
+    #header .navbar {
+        display: flex;
+        flex: 1;
+        padding-left: 0;
+        margin-left: 0;
+        
+    }
+    .navbar a i.toggle{
+        display: block;
+       
+    }
+   
+    #header .navbar .navitems{
+        display: none;
+        flex-direction: column;
+        background-color:transparent;
+        width: 100%;
+        border-bottom: solid 3px violet;
+        border-top:  solid 3px violet;
+       
+    }
+    #header .navbar .navitems li{
+        border-top: solid 1px violet;
+    }
+    #header .navbar .navitems li:last-child{
+        border-bottom:solid 1px violet; 
+    }
+
+    #header .navbar .navitems.open{
+        display: block;
+        
+    }
+
+
+    
+}
